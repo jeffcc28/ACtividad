@@ -28,10 +28,6 @@
 }
 
 .about {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
     padding: 50px;
     text-align: center;
     background-color: #858688;
