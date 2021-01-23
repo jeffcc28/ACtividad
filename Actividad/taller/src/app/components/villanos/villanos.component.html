@@ -1,0 +1,8 @@
+<h1> Villanos <small>DC y Marvel</small></h1>
+
+<div class="card-columns">
+
+    <app-villano-tarjeta (villanoSeleccionado)="verVillano($event)" [villano]="foo" [index]="i" *ngFor="let foo of villanos; let i = index"></app-villano-tarjeta>
+
+
+</div>
