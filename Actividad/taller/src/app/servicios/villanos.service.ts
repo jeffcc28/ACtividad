@@ -68,7 +68,7 @@ export class VillanosService {
        return this.villanos[idx];
       }
       
-      buscarVilanos( termino:string ):Villano[]{
+    buscarVilanos( termino:string ):Villano[]{
 
     let villanosArr:Villano[] = [];
     termino = termino.toLowerCase();
