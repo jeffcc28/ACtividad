@@ -9,6 +9,8 @@ import { VillanosService } from "./servicios/villanos.service";
 
 // RUTAS
 import { APP_ROUTING } from "./app.routes";
+import { AppRoutingModule } from "./app-routing.module";
+import { FormsModule } from "@angular/forms";
 
 //  COMPONENTES 
 import { AppComponent } from './app.component';
@@ -22,6 +24,11 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
 import { VillanosComponent } from './components/villanos/villanos.component';
 import { VillanoComponent } from './components/villano/villano.component';
 import { VillanoTarjetaComponent } from './components/villano-tarjeta/villano-tarjeta.component';
+import { CrudHeroeComponent } from './components/crud-heroe/crud-heroe.component';
+import { CrudHeroesComponent } from './components/crud-heroes/crud-heroes.component';
+import { CrudVillanosComponent } from './components/crud-villanos/crud-villanos.component';
+import { CrudVillanoComponent } from './components/crud-villano/crud-villano.component';
+
 
 
 
@@ -37,11 +44,18 @@ import { VillanoTarjetaComponent } from './components/villano-tarjeta/villano-ta
     HeroeTarjetaComponent,
     VillanosComponent,
     VillanoComponent,
-    VillanoTarjetaComponent
+    VillanoTarjetaComponent,
+    CrudHeroeComponent,
+    CrudHeroesComponent,
+    CrudVillanosComponent,
+    CrudVillanoComponent,
+    
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     HeroesService,
