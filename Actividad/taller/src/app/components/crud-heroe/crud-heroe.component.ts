@@ -3,7 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 
-import { HeroeModel } from "../../models/heroe.model";
+import { Heroe_VillanoModel } from "../../models/heroe_villano.model";
 import { HeroesService } from "../../servicios/crudHeroes.service";
 
 import  Swal  from "sweetalert2";
@@ -15,7 +15,7 @@ import  Swal  from "sweetalert2";
 })
 export class CrudHeroeComponent implements OnInit {
 
-  heroe = new HeroeModel();  
+  heroe = new Heroe_VillanoModel();  
 
   constructor(private _heroesServices: HeroesService,
               private _route:ActivatedRoute ) { }
@@ -25,7 +25,7 @@ export class CrudHeroeComponent implements OnInit {
     const id = this._route.snapshot.paramMap.get('id');
 
     if (id !== 'nuevo') {
-      this._heroesServices.getHeroe(id).subscribe((resp: HeroeModel) => {
+      this._heroesServices.getHeroe(id).subscribe((resp: Heroe_VillanoModel) => {
         this.heroe = resp;
         this.heroe.id = id;
       });

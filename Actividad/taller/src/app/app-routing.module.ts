@@ -9,7 +9,10 @@ import { CrudVillanoComponent } from './components/crud-villano/crud-villano.com
 const routes: Routes = [
   { path: 'heroes', component: CrudHeroesComponent },
   { path: 'heroe/:id', component: CrudHeroeComponent },
-  { path:'**', pathMatch: 'full', redirectTo:'heroes'}
+  { path: 'villanos', component: CrudVillanosComponent },
+  { path: 'villano/:id', component: CrudVillanoComponent },
+  { path:'**', pathMatch: 'full', redirectTo:'heroes'},
+  { path:'**', pathMatch: 'full', redirectTo:'villanos'}
 ]
 
 @NgModule({

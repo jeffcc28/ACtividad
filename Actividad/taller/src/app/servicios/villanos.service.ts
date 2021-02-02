@@ -48,7 +48,7 @@ export class VillanosService {
             casa: "Marvel"
           },
           {
-            nombre: "Wolverine",
+            nombre: "Dientes de sanble",
             bio: "es un mutante que posee unas capacidades físicas sobrehumanas mezcladas con las de una bestia, cuyas más notables son el tiempo de recuperación superior y sentidos muy agudizados. Tiene tendencias homicidas y sociopatía. Ha pertenecido a la Hermandad de Mutantes, a los Merodeadores, los X-Men y Factor X.",
             img: "assets/img/Dientes_sable.png",
             aparicion: "agosto de 1977",

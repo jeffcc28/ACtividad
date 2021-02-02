@@ -1,4 +1,4 @@
-export class HeroeModel {
+export class Heroe_VillanoModel {
 
     id: string;
     name: string;

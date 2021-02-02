@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroeModel } from "../../models/heroe.model";
+import { Heroe_VillanoModel } from "../../models/heroe_villano.model";
 import { HeroesService } from "../../servicios/crudHeroes.service";
 
 import Swal from "sweetalert2";
@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 })
 export class CrudHeroesComponent implements OnInit {
 
-  heroes: HeroeModel[] = [];
+  heroes: Heroe_VillanoModel[] = [];
   cargando = true;
 
   constructor( private _heroeServices: HeroesService) { }
@@ -24,7 +24,7 @@ export class CrudHeroesComponent implements OnInit {
 
   }
   
-  private borrarHeroe(heroe: HeroeModel, i: number) {
+  private borrarHeroe(heroe: Heroe_VillanoModel, i: number) {
     Swal.fire({
       title: 'Estas seguro?',
       text: `Estas seguro que deseas eliminar a ${ heroe.name}`,

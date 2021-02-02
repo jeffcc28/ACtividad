@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { HeroeModel } from "../models/heroe.model";
+import { Heroe_VillanoModel } from "../models/heroe_villano.model";
 
 import { map } from "rxjs/operators";
 
@@ -13,7 +13,7 @@ export class HeroesService {
 
   private url = 'https://bd-firebase-jcc-default-rtdb.firebaseio.com/';
   
-  crearHeroe(heroe: HeroeModel) {
+  crearHeroe(heroe: Heroe_VillanoModel) {
     return this._http.post(`${this.url}/heroe.json`, heroe).pipe(
       map((resp: any) => {
         heroe.id = resp.id;
@@ -22,7 +22,7 @@ export class HeroesService {
     );
   }
 
-  actualizarHereo(heroe: HeroeModel) {
+  actualizarHereo(heroe: Heroe_VillanoModel) {
     
     const heroeTemp = {
       ...heroe
@@ -51,10 +51,10 @@ export class HeroesService {
 
   private crearArreglo(heroesOBJ: object) {
     
-    const heroes: HeroeModel[] = [];
+    const heroes: Heroe_VillanoModel[] = [];
 
     Object.keys(heroesOBJ).forEach(key => {
-      const heroe: HeroeModel = heroesOBJ[key];
+      const heroe: Heroe_VillanoModel = heroesOBJ[key];
       heroe.id = key;
       
 
