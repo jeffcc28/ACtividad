@@ -1,0 +1,13 @@
+<ion-grid fixed>
+
+    <ion-row>
+
+        <ion-col *ngFor="let villano of villanos; let i = index; " size="12" size-lg="3" size-md="4" size-sm="2" size-xs="12">
+
+            <app-villano [villano]="villano"></app-villano>
+
+        </ion-col>
+
+    </ion-row>
+
+</ion-grid>

@@ -1,0 +1,7 @@
+{
+  "name": "Heroes_villanos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
