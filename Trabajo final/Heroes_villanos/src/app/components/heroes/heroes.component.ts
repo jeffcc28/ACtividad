@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { HeroesService,Heroe } from "../../services/heroes.service";
 
 
@@ -10,7 +10,11 @@ import { HeroesService,Heroe } from "../../services/heroes.service";
 export class HeroesComponent implements OnInit {
 
 
-  heroes: Heroe[] = [];
+  @Input() heroes: Heroe[] = [];
+  @Input() enFavoritos = false;
+
+  
+  
 
   constructor(private _heroesService: HeroesService) {
     console.log("Constructor Heroes");

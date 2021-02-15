@@ -8,7 +8,16 @@
 
 <ion-content [fullscreen]="true" color="dark">
 
-    <app-heroes></app-heroes>
+    <ion-row>
+
+        <ion-col *ngFor="let heroe of heroes; let i = index; " size="12" size-lg="3" size-md="4" size-sm="2" size-xs="12">
+
+            <app-heroe [heroe]="heroe" [idx]=i></app-heroe>
+
+        </ion-col>
+
+    </ion-row>
+
 
 
 </ion-content>

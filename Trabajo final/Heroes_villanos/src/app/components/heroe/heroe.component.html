@@ -1,10 +1,20 @@
 <ion-card>
     <ion-card-header>
         <ion-card-subtitle>
+
+            <span class="text-idx">{{ idx+ 1 }}.</span>
+            <span class="heroe-source-name"> {{heroe.nombre}}</span>
+
+            <div class="heroe-more">
+                <ion-button (click)="lanzarMenu()" fill="clear">
+                    <ion-icon class="ion-icon" slot="icon-only" name="ellipsis-horizontal"></ion-icon>
+                </ion-button>
+
+            </div>
             <div class="card animated fadeIn fast">
                 <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
                 <div class="card-body">
-                    <h5 class="card-title">{{heroe.nombre}}</h5>
+                    <!-- <h5 class="card-title">{{heroe.nombre}}</h5> -->
                     <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
                     <p class="card-text">{{heroe.bio}}</p>
 
@@ -12,7 +22,7 @@
             </div>
         </ion-card-subtitle>
 
-        <!-- <ion-card-title (click)="abrirPagina()"> {{ noticia.title }} </ion-card-title> -->
+
 
     </ion-card-header>
 </ion-card>

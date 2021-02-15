@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeroesService, Heroe } from '../../services/heroes.service';
 
 
 @Component({
@@ -8,9 +9,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+  heroes: Heroe[] = [];
+
   
-  constructor() {
-    
+  constructor(private _heroesService: HeroesService) {
+    console.log("Constructor Heroes");
+  }
+
+  ngOnInit(): void {
+    this.heroes = this._heroesService.getHeroes();
+    console.log(this.heroes);
   }
 
     

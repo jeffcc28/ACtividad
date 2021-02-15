@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { VillanosService, Villano } from '../../services/villanos.service';
 
 
@@ -9,7 +9,8 @@ import { VillanosService, Villano } from '../../services/villanos.service';
 })
 export class VillanosComponent implements OnInit {
 
-  villanos: Villano[] = [];
+  @Input() villanos: Villano[] = [];
+  @Input() enFavoritos = false;
 
   constructor(private _villanosService: VillanosService) {
     console.log("Constructor villanos");

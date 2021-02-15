@@ -1,17 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true" color="dark">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Favoritos
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="dark">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-slides [options]="sliderOpts" *ngIf="datalocalService.heroes.length === 0 && datalocalVillanosService.villanos.length === 0">
+        <ion-slide>
+            <h1>no hay favoritos</h1>
+        </ion-slide>
+    </ion-slides>
+
+    <app-heroes *ngIf="datalocalService.heroes.length > 0 " [enFavoritos]="true" [heroes]="datalocalService.heroes"></app-heroes>
+    <app-villanos *ngIf="datalocalVillanosService.villanos.length > 0 " [enFavoritos]="true" [villanos]="datalocalVillanosService.villanos"></app-villanos>
+
+
 </ion-content>

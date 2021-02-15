@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Villano, VillanosService } from "../../services/villanos.service";
 
 
 @Component({
@@ -7,7 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  
+  villanos: Villano[] = [];
 
-  constructor() {}
+  
+  constructor(private _villanosService: VillanosService) {
+    console.log("Constructor Heroes");
+  }
 
+  ngOnInit(): void {
+    this.villanos = this._villanosService.getVillanos();
+    console.log(this.villanos);
+  }
 }
