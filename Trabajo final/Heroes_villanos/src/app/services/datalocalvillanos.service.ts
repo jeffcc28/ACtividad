@@ -53,7 +53,7 @@ export class DatalocalvillanosService {
 
   
 borrarVillanos(villano: Villano) {
-  this.villanos= this.villanos.filter(villa => villa.idx === villano.idx);
+  this.villanos= this.villanos.filter(villa => villa.nombre === villano.nombre);
 
   Storage.set({
     key: 'favoritos',
